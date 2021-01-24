@@ -13,3 +13,12 @@ crontab -e
 ```
 own VPS for 100 days to get a badge
 profit!
+
+## Development
+
+For easier debugging you can switch to `:selenium_chrome` option in capybara setup.
+see `lib/fanatic_badge.rb:7`
+
+```
+bin/run # single run
+```
