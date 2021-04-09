@@ -7,6 +7,7 @@ module FanaticBadge
     session = Capybara::Session.new(:selenium_chrome_headless)
 
     session.visit STACKOVERFLOW_URL + 'users/login/'
+    session.find('.grid--cell.s-btn.s-btn__primary.js-accept-cookies.js-consent-banner-hide').click
     session.within '#login-form' do
       session.fill_in 'email', with: CREDENTIALS['stackoverflow']['email']
       session.fill_in 'password', with: CREDENTIALS['stackoverflow']['password']
